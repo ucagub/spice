@@ -1,0 +1,1472 @@
+EESchema Schematic File Version 4
+LIBS:spice-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Interface_USB:CP2102N-A01-GQFN24 U4
+U 1 1 5D7CFDCA
+P 7550 2150
+F 0 "U4" H 7950 3150 50  0000 C CNN
+F 1 "CP2102N-A01-GQFN24" H 8050 3000 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm" H 8000 1350 50  0001 L CNN
+F 3 "https://www.silabs.com/documents/public/data-sheets/cp2102n-datasheet.pdf" H 7600 1100 50  0001 C CNN
+	1    7550 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5D7CFDE1
+P 7650 3150
+F 0 "#PWR0103" H 7650 2900 50  0001 C CNN
+F 1 "GND" H 7655 2977 50  0000 C CNN
+F 2 "" H 7650 3150 50  0001 C CNN
+F 3 "" H 7650 3150 50  0001 C CNN
+	1    7650 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 2450 6800 2450
+Text HLabel 8150 1950 2    50   Output ~ 0
+TXD
+Text HLabel 8150 1850 2    50   Input ~ 0
+RXD
+$Comp
+L power:GND #PWR?
+U 1 1 5D7D539F
+P 7050 1100
+AR Path="/5D7B974C/5D7D539F" Ref="#PWR?"  Part="1" 
+AR Path="/5D7CE739/5D7D539F" Ref="#PWR0105"  Part="1" 
+F 0 "#PWR0105" H 7050 850 50  0001 C CNN
+F 1 "GND" H 7055 927 50  0000 C CNN
+F 2 "" H 7050 1100 50  0001 C CNN
+F 3 "" H 7050 1100 50  0001 C CNN
+	1    7050 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C9
+U 1 1 5D7D584E
+P 7050 950
+F 0 "C9" H 7165 996 50  0000 L CNN
+F 1 "100nF" H 7165 905 50  0000 L CNN
+F 2 "SamacSys_Parts:CAPC1608X90N" H 7088 800 50  0001 C CNN
+F 3 "~" H 7050 950 50  0001 C CNN
+	1    7050 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 800  7450 800 
+Wire Wire Line
+	7450 800  7450 1150
+Wire Wire Line
+	6800 2450 6800 2150
+Wire Wire Line
+	6800 2150 6950 2150
+Connection ~ 6800 2450
+$Comp
+L Device:R R15
+U 1 1 5D7D6D74
+P 6550 1350
+F 0 "R15" H 6620 1396 50  0000 L CNN
+F 1 "10k" H 6620 1305 50  0000 L CNN
+F 2 "SamacSys_Parts:RESC1608X55N" V 6480 1350 50  0001 C CNN
+F 3 "~" H 6550 1350 50  0001 C CNN
+	1    6550 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 1500 6550 1550
+Wire Wire Line
+	6550 1550 6950 1550
+Wire Wire Line
+	7450 1150 7550 1150
+Wire Wire Line
+	7550 1150 7550 1250
+Connection ~ 7450 1150
+Wire Wire Line
+	7450 1150 7450 1250
+Wire Wire Line
+	6550 800  7050 800 
+Wire Wire Line
+	6550 800  6550 1200
+Connection ~ 7050 800 
+$Comp
+L spicy:MAX8903HETI+T U3
+U 1 1 5D7E56D7
+P 1900 6050
+F 0 "U3" H 3100 6437 60  0000 C CNN
+F 1 "MAX8903HETI+T" H 3100 6331 60  0000 C CNN
+F 2 "SamacSys_Parts:MAX8903HETI" H 3100 6290 60  0001 C CNN
+F 3 "" H 1900 6050 60  0000 C CNN
+	1    1900 6050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 6250 1750 6250
+Wire Wire Line
+	1750 6250 1750 6350
+Wire Wire Line
+	1750 6350 1900 6350
+Connection ~ 1750 6250
+Wire Wire Line
+	1750 6150 1750 6050
+Wire Wire Line
+	1750 6050 1900 6050
+Wire Wire Line
+	1400 6250 1500 6250
+$Comp
+L Device:C C6
+U 1 1 5D7E7B99
+P 1500 6100
+F 0 "C6" H 1250 6150 50  0000 L CNN
+F 1 "4.7uF" H 1150 6050 50  0000 L CNN
+F 2 "SamacSys_Parts:CAPC1608X90N" H 1538 5950 50  0001 C CNN
+F 3 "~" H 1500 6100 50  0001 C CNN
+	1    1500 6100
+	1    0    0    -1  
+$EndComp
+Connection ~ 1500 6250
+Wire Wire Line
+	1500 6250 1750 6250
+Wire Wire Line
+	1500 5950 1750 5950
+Wire Wire Line
+	1750 5950 1750 6050
+Connection ~ 1750 6050
+$Comp
+L power:GND #PWR0106
+U 1 1 5D7E8D3D
+P 1300 5800
+F 0 "#PWR0106" H 1300 5550 50  0001 C CNN
+F 1 "GND" H 1305 5627 50  0000 C CNN
+F 2 "" H 1300 5800 50  0001 C CNN
+F 3 "" H 1300 5800 50  0001 C CNN
+	1    1300 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 5800 1500 5950
+Connection ~ 1500 5950
+Wire Wire Line
+	1300 5800 1500 5800
+Wire Wire Line
+	4300 6150 4500 6150
+Wire Wire Line
+	4500 6150 4500 6250
+Wire Wire Line
+	4500 6250 4300 6250
+Wire Wire Line
+	4300 6350 4500 6350
+Wire Wire Line
+	4300 6450 4500 6450
+Wire Wire Line
+	4500 6450 4500 6350
+Connection ~ 4500 6350
+Wire Wire Line
+	4500 6350 5000 6350
+$Comp
+L Device:C C3
+U 1 1 5D7ED62C
+P 900 6700
+F 0 "C3" H 650 6750 50  0000 L CNN
+F 1 "100nF" H 550 6650 50  0000 L CNN
+F 2 "SamacSys_Parts:CAPC1608X90N" H 938 6550 50  0001 C CNN
+F 3 "~" H 900 6700 50  0001 C CNN
+	1    900  6700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	900  6850 900  7050
+Text Label 4500 6150 0    50   ~ 0
+LX
+$Comp
+L Device:R R5
+U 1 1 5D7F114B
+P 1650 7050
+F 0 "R5" V 1600 7250 50  0000 C CNN
+F 1 "3k" V 1650 7050 50  0000 C CNN
+F 2 "SamacSys_Parts:RESC1608X55N" V 1580 7050 50  0001 C CNN
+F 3 "~" H 1650 7050 50  0001 C CNN
+	1    1650 7050
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	1800 7050 1900 7050
+$Comp
+L Device:R R6
+U 1 1 5D7F646C
+P 1650 7250
+F 0 "R6" V 1650 7250 50  0000 C CNN
+F 1 "1.2k" V 1550 7300 50  0000 C CNN
+F 2 "SamacSys_Parts:RESC1608X55N" V 1580 7250 50  0001 C CNN
+F 3 "~" H 1650 7250 50  0001 C CNN
+	1    1650 7250
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	1800 7250 1900 7250
+Wire Wire Line
+	1500 7050 1500 7150
+$Comp
+L power:GND #PWR0107
+U 1 1 5D7F82A4
+P 1500 7250
+F 0 "#PWR0107" H 1500 7000 50  0001 C CNN
+F 1 "GND" H 1505 7077 50  0000 C CNN
+F 2 "" H 1500 7250 50  0001 C CNN
+F 3 "" H 1500 7250 50  0001 C CNN
+	1    1500 7250
+	1    0    0    -1  
+$EndComp
+Connection ~ 1500 7250
+Text Label 4450 7250 0    50   ~ 0
+GND
+Wire Wire Line
+	1900 6650 1650 6650
+Text Label 1650 6650 0    50   ~ 0
+GND
+Wire Wire Line
+	4300 6550 4500 6550
+Wire Wire Line
+	4500 6550 4500 6650
+Wire Wire Line
+	4500 6650 4300 6650
+Wire Wire Line
+	4300 6850 4450 6850
+Wire Wire Line
+	4450 6850 4450 6950
+Wire Wire Line
+	4450 6950 4300 6950
+$Comp
+L Device:C C7
+U 1 1 5D800920
+P 4800 7100
+F 0 "C7" H 4915 7146 50  0000 L CNN
+F 1 "10uF" H 4915 7055 50  0000 L CNN
+F 2 "SamacSys_Parts:CAPC1608X90N" H 4838 6950 50  0001 C CNN
+F 3 "~" H 4800 7100 50  0001 C CNN
+	1    4800 7100
+	1    0    0    -1  
+$EndComp
+Connection ~ 4450 6950
+Wire Wire Line
+	4450 6950 4800 6950
+Wire Wire Line
+	4300 7250 4800 7250
+Wire Wire Line
+	4300 7350 4450 7350
+Wire Wire Line
+	4300 6750 4550 6750
+Text Label 4550 6750 0    50   ~ 0
+chg
+Wire Wire Line
+	1900 6750 1650 6750
+Text Label 1650 6750 0    50   ~ 0
+dok
+Wire Wire Line
+	1500 7150 1900 7150
+Connection ~ 1500 7150
+Wire Wire Line
+	1500 7150 1500 7250
+Text Label 900  7050 0    50   ~ 0
+LX
+Wire Wire Line
+	1900 7350 1900 7600
+Wire Wire Line
+	1900 7600 1450 7600
+Text Label 1450 7600 0    50   ~ 0
+dok
+Text Label 1650 6850 0    50   ~ 0
+VL
+Wire Wire Line
+	1900 6950 1500 6950
+Wire Wire Line
+	1500 6950 1500 7050
+Connection ~ 1500 7050
+Wire Wire Line
+	4300 7050 4450 7050
+Text Label 4450 7050 0    50   ~ 0
+uok
+Wire Wire Line
+	4300 7150 4450 7150
+Text Label 4450 7150 0    50   ~ 0
+flt
+$Comp
+L power:GND #PWR0108
+U 1 1 5D854623
+P 4400 6050
+F 0 "#PWR0108" H 4400 5800 50  0001 C CNN
+F 1 "GND" H 4405 5877 50  0000 C CNN
+F 2 "" H 4400 6050 50  0001 C CNN
+F 3 "" H 4400 6050 50  0001 C CNN
+	1    4400 6050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 6050 4400 6050
+Wire Wire Line
+	900  6550 1900 6550
+$Comp
+L Device:C C5
+U 1 1 5D8651AE
+P 1200 7000
+F 0 "C5" H 1100 7100 50  0000 L CNN
+F 1 "1uF" H 1000 6900 50  0000 L CNN
+F 2 "SamacSys_Parts:CAPC1608X90N" H 1238 6850 50  0001 C CNN
+F 3 "~" H 1200 7000 50  0001 C CNN
+	1    1200 7000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 6850 1900 6850
+Wire Wire Line
+	1200 7150 1200 7250
+Wire Wire Line
+	1200 7250 1500 7250
+Text Label 4450 7350 0    50   ~ 0
+THM
+$Comp
+L Device:R R4
+U 1 1 5D8A88B6
+P 1650 6450
+F 0 "R4" V 1600 6650 50  0000 C CNN
+F 1 "499k" V 1650 6450 50  0000 C CNN
+F 2 "SamacSys_Parts:RESC1608X55N" V 1580 6450 50  0001 C CNN
+F 3 "~" H 1650 6450 50  0001 C CNN
+	1    1650 6450
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	1500 6450 1500 6250
+Wire Wire Line
+	1800 6450 1900 6450
+$Comp
+L Device:C C8
+U 1 1 5D8AE274
+P 4850 6550
+F 0 "C8" H 4965 6596 50  0000 L CNN
+F 1 "10uF" H 4965 6505 50  0000 L CNN
+F 2 "SamacSys_Parts:CAPC1608X90N" H 4888 6400 50  0001 C CNN
+F 3 "~" H 4850 6550 50  0001 C CNN
+	1    4850 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0110
+U 1 1 5D8B15F9
+P 4850 6700
+F 0 "#PWR0110" H 4850 6450 50  0001 C CNN
+F 1 "GND" H 4855 6527 50  0000 C CNN
+F 2 "" H 4850 6700 50  0001 C CNN
+F 3 "" H 4850 6700 50  0001 C CNN
+	1    4850 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0111
+U 1 1 5D8B3E9B
+P 4300 7450
+F 0 "#PWR0111" H 4300 7200 50  0001 C CNN
+F 1 "GND" H 4305 7277 50  0000 C CNN
+F 2 "" H 4300 7450 50  0001 C CNN
+F 3 "" H 4300 7450 50  0001 C CNN
+	1    4300 7450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J2
+U 1 1 5D8BB00C
+P 5400 7100
+F 0 "J2" H 5372 6982 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 5372 7073 50  0000 R CNN
+F 2 "SamacSys_Parts:TSM10201LSVA" H 5400 7100 50  0001 C CNN
+F 3 "~" H 5400 7100 50  0001 C CNN
+	1    5400 7100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4500 6550 4700 6550
+Wire Wire Line
+	4700 6550 4700 6400
+Wire Wire Line
+	4700 6400 4850 6400
+Connection ~ 4500 6550
+Wire Wire Line
+	4800 6950 5200 6950
+Wire Wire Line
+	5200 6950 5200 7000
+Connection ~ 4800 6950
+Wire Wire Line
+	4800 7250 5200 7250
+Wire Wire Line
+	5200 7250 5200 7100
+Connection ~ 4800 7250
+Wire Wire Line
+	4850 6400 5200 6400
+Connection ~ 4850 6400
+Text Label 5200 6400 0    50   ~ 0
+Vsys
+$Comp
+L Device:R R10
+U 1 1 5D8A0EA0
+P 3950 1800
+F 0 "R10" H 4020 1846 50  0000 L CNN
+F 1 "1.5k" H 4020 1755 50  0000 L CNN
+F 2 "SamacSys_Parts:RESC1608X55N" V 3880 1800 50  0001 C CNN
+F 3 "~" H 3950 1800 50  0001 C CNN
+	1    3950 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R11
+U 1 1 5D8A150D
+P 4250 1800
+F 0 "R11" H 4320 1846 50  0000 L CNN
+F 1 "1.5k" H 4320 1755 50  0000 L CNN
+F 2 "SamacSys_Parts:RESC1608X55N" V 4180 1800 50  0001 C CNN
+F 3 "~" H 4250 1800 50  0001 C CNN
+	1    4250 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R12
+U 1 1 5D8A18AC
+P 4550 1800
+F 0 "R12" H 4620 1846 50  0000 L CNN
+F 1 "5k" H 4620 1755 50  0000 L CNN
+F 2 "SamacSys_Parts:RESC1608X55N" V 4480 1800 50  0001 C CNN
+F 3 "~" H 4550 1800 50  0001 C CNN
+	1    4550 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 1500 4250 1650
+Wire Wire Line
+	4250 1500 4550 1500
+Wire Wire Line
+	4550 1500 4550 1650
+Connection ~ 4250 1500
+Wire Wire Line
+	3950 1650 3950 1500
+Wire Wire Line
+	3950 1500 4250 1500
+Wire Wire Line
+	4250 1950 4250 2050
+Wire Wire Line
+	4550 1950 4550 2050
+Text Label 3950 2050 0    50   ~ 0
+sda
+Text Label 4250 2050 0    50   ~ 0
+scl
+Wire Wire Line
+	3950 1950 3950 2050
+Text Label 4550 2650 0    50   ~ 0
+pok
+Text HLabel 4550 4000 0    50   Output ~ 0
+JTAG_TMS
+Text HLabel 4550 4100 0    50   Output ~ 0
+JTAG_TCK
+Text HLabel 4550 4200 0    50   Input ~ 0
+TDO
+Text HLabel 4550 4300 0    50   Output ~ 0
+TDI
+Text HLabel 4550 4400 0    50   Output ~ 0
+nRESET
+$Comp
+L power:VDD #PWR0112
+U 1 1 5D900261
+P 5550 4000
+F 0 "#PWR0112" H 5550 3850 50  0001 C CNN
+F 1 "VDD" V 5567 4128 50  0000 L CNN
+F 2 "" H 5550 4000 50  0001 C CNN
+F 3 "" H 5550 4000 50  0001 C CNN
+	1    5550 4000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5450 4000 5550 4000
+$Comp
+L power:GND #PWR0113
+U 1 1 5D90733D
+P 5550 4400
+F 0 "#PWR0113" H 5550 4150 50  0001 C CNN
+F 1 "GND" H 5555 4227 50  0000 C CNN
+F 2 "" H 5550 4400 50  0001 C CNN
+F 3 "" H 5550 4400 50  0001 C CNN
+	1    5550 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 4400 5550 4400
+Wire Wire Line
+	5450 4200 5550 4200
+Wire Wire Line
+	5550 4200 5550 4400
+Connection ~ 5550 4400
+Wire Wire Line
+	5450 4100 5550 4100
+Wire Wire Line
+	5550 4100 5550 4200
+Connection ~ 5550 4200
+NoConn ~ 5450 4300
+Wire Wire Line
+	7650 3050 7650 3150
+Wire Wire Line
+	7550 3050 7550 3150
+Wire Wire Line
+	7550 3150 7650 3150
+Connection ~ 7650 3150
+$Comp
+L spice-rescue:BCW66HQTA-SamacSys_Parts Q1
+U 1 1 5D91E89E
+P 9700 2100
+F 0 "Q1" H 10238 2146 50  0000 L CNN
+F 1 "BCW66HQTA" H 10238 2055 50  0000 L CNN
+F 2 "SamacSys_Parts:FMMT619TA" H 10250 1950 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/BCW66HQTA.pdf" H 10250 1850 50  0001 L CNN
+F 4 "Bipolar Transistors - BJT General Purpose Transistor" H 10250 1750 50  0001 L CNN "Description"
+F 5 "" H 10250 1650 50  0001 L CNN "Height"
+F 6 "621-BCW66HQTA" H 10250 1550 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=621-BCW66HQTA" H 10250 1450 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Diodes Inc." H 10250 1350 50  0001 L CNN "Manufacturer_Name"
+F 9 "BCW66HQTA" H 10250 1250 50  0001 L CNN "Manufacturer_Part_Number"
+	1    9700 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L spice-rescue:CMI-9653S-SMT-TR-SamacSys_Parts LS1
+U 1 1 5D927B59
+P 10100 1700
+F 0 "LS1" V 10546 1572 50  0000 R CNN
+F 1 "CMI-9653S-SMT-TR" V 10455 1572 50  0000 R CNN
+F 2 "SamacSys_Parts:CMI9653SSMTTR" H 10750 1800 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/CMI-9653S-SMT-TR.pdf" H 10750 1700 50  0001 L CNN
+F 4 "Audio Indicators & Alerts Buzzer 9.6mm sq 2.7kHz 3V SMT" H 10750 1600 50  0001 L CNN "Description"
+F 5 "5" H 10750 1500 50  0001 L CNN "Height"
+F 6 "490-CMI-9653S-SMT-TR" H 10750 1400 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=490-CMI-9653S-SMT-TR" H 10750 1300 50  0001 L CNN "Mouser Price/Stock"
+F 8 "CUI" H 10750 1200 50  0001 L CNN "Manufacturer_Name"
+F 9 "CMI-9653S-SMT-TR" H 10750 1100 50  0001 L CNN "Manufacturer_Part_Number"
+	1    10100 1700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10100 1800 10100 1700
+Wire Wire Line
+	10100 900  10100 800 
+$Comp
+L power:VDD #PWR0114
+U 1 1 5D939E22
+P 10100 800
+F 0 "#PWR0114" H 10100 650 50  0001 C CNN
+F 1 "VDD" H 10117 973 50  0000 C CNN
+F 2 "" H 10100 800 50  0001 C CNN
+F 3 "" H 10100 800 50  0001 C CNN
+	1    10100 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R19
+U 1 1 5D93A8A6
+P 10100 2650
+F 0 "R19" H 10170 2696 50  0000 L CNN
+F 1 "5.1" H 10170 2605 50  0000 L CNN
+F 2 "SamacSys_Parts:RESC1608X55N" V 10030 2650 50  0001 C CNN
+F 3 "~" H 10100 2650 50  0001 C CNN
+	1    10100 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 2500 10100 2400
+Wire Wire Line
+	9700 2100 9600 2100
+Wire Wire Line
+	10100 2800 10100 2900
+$Comp
+L power:GND #PWR0115
+U 1 1 5D953BA4
+P 10100 2900
+F 0 "#PWR0115" H 10100 2650 50  0001 C CNN
+F 1 "GND" H 10105 2727 50  0000 C CNN
+F 2 "" H 10100 2900 50  0001 C CNN
+F 3 "" H 10100 2900 50  0001 C CNN
+	1    10100 2900
+	1    0    0    -1  
+$EndComp
+Text HLabel 9200 2100 0    50   Input ~ 0
+BUZZER
+$Comp
+L Device:R R18
+U 1 1 5D95464D
+P 9450 2100
+F 0 "R18" V 9657 2100 50  0000 C CNN
+F 1 "12k" V 9566 2100 50  0000 C CNN
+F 2 "SamacSys_Parts:RESC1608X55N" V 9380 2100 50  0001 C CNN
+F 3 "~" H 9450 2100 50  0001 C CNN
+	1    9450 2100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9300 2100 9200 2100
+Text HLabel 9650 3700 0    50   Input ~ 0
+LED1
+Text HLabel 9650 4250 0    50   Input ~ 0
+LED2
+Wire Wire Line
+	9650 3700 9750 3700
+Wire Wire Line
+	9650 4250 9750 4250
+$Comp
+L spice-rescue:LS_L296-P2Q2-1-Z-SamacSys_Parts LED6
+U 1 1 5D974530
+P 10350 3700
+F 0 "LED6" H 10650 3435 50  0000 C CNN
+F 1 "LS_L296-P2Q2-1-Z" H 10650 3526 50  0000 C CNN
+F 2 "SamacSys_Parts:LEDC1707X85N" H 10850 3850 50  0001 L BNN
+F 3 "http://www.osram-os.com/Graphics/XPic5/00077119_0.pdf/LS L296 - SMARTLED 0603.pdf" H 10850 3750 50  0001 L BNN
+F 4 "Standard LEDs - SMD Super Red, 633nm 112mcd, 20mA" H 10850 3650 50  0001 L BNN "Description"
+F 5 "0.85" H 10850 3550 50  0001 L BNN "Height"
+F 6 "720-LSL296-P2Q2-1-Z" H 10850 3450 50  0001 L BNN "Mouser Part Number"
+F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=720-LSL296-P2Q2-1-Z" H 10850 3350 50  0001 L BNN "Mouser Price/Stock"
+F 8 "OSRAM Opto Semiconductors" H 10850 3250 50  0001 L BNN "Manufacturer_Name"
+F 9 "LS L296-P2Q2-1-Z" H 10850 3150 50  0001 L BNN "Manufacturer_Part_Number"
+	1    10350 3700
+	-1   0    0    1   
+$EndComp
+$Comp
+L spice-rescue:LP_L296-J2L2-25-Z-SamacSys_Parts LED7
+U 1 1 5D99DF3D
+P 10350 4250
+F 0 "LED7" H 10650 3985 50  0000 C CNN
+F 1 "LP_L296-J2L2-25-Z" H 10650 4076 50  0000 C CNN
+F 2 "SamacSys_Parts:LEDC1707X85N" H 10850 4400 50  0001 L BNN
+F 3 "http://www.osram-os.com/Graphics/XPic5/00077128_0.pdf/LP%20L296%20-%20SMARTLED%200603.pdf" H 10850 4300 50  0001 L BNN
+F 4 "Standard LEDs - SMD Pure Green" H 10850 4200 50  0001 L BNN "Description"
+F 5 "0.85" H 10850 4100 50  0001 L BNN "Height"
+F 6 "720-LPL296J2L225Z" H 10850 4000 50  0001 L BNN "Mouser Part Number"
+F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=720-LPL296J2L225Z" H 10850 3900 50  0001 L BNN "Mouser Price/Stock"
+F 8 "OSRAM Opto Semiconductors" H 10850 3800 50  0001 L BNN "Manufacturer_Name"
+F 9 "LP L296-J2L2-25-Z" H 10850 3700 50  0001 L BNN "Manufacturer_Part_Number"
+	1    10350 4250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	10350 3700 10650 3700
+Wire Wire Line
+	10350 4250 10650 4250
+$Comp
+L power:GND #PWR0116
+U 1 1 5D9B0C77
+P 10650 4250
+F 0 "#PWR0116" H 10650 4000 50  0001 C CNN
+F 1 "GND" H 10655 4077 50  0000 C CNN
+F 2 "" H 10650 4250 50  0001 C CNN
+F 3 "" H 10650 4250 50  0001 C CNN
+	1    10650 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0117
+U 1 1 5D9B111C
+P 10650 3700
+F 0 "#PWR0117" H 10650 3450 50  0001 C CNN
+F 1 "GND" H 10655 3527 50  0000 C CNN
+F 2 "" H 10650 3700 50  0001 C CNN
+F 3 "" H 10650 3700 50  0001 C CNN
+	1    10650 3700
+	1    0    0    -1  
+$EndComp
+Text Label 1400 6250 2    50   ~ 0
+Vbus
+$Comp
+L pspice:INDUCTOR L2
+U 1 1 5D7EA86E
+P 4750 6250
+F 0 "L2" H 4750 6465 50  0000 C CNN
+F 1 "1uH" H 4750 6374 50  0000 C CNN
+F 2 "SamacSys_Parts:INDPM2520X120N" H 4750 6250 50  0001 C CNN
+F 3 "~" H 4750 6250 50  0001 C CNN
+	1    4750 6250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 6350 5000 6250
+Text HLabel 10250 5600 2    50   Output ~ 0
+SCK
+Text HLabel 8250 5700 0    50   Output ~ 0
+MISO
+Text HLabel 8250 6000 0    50   Input ~ 0
+MOSI
+Text HLabel 8150 5600 0    50   Input ~ 0
+FLASH_CS
+$Comp
+L Device:R R16
+U 1 1 5D91C1D6
+P 7500 5600
+F 0 "R16" H 7570 5646 50  0000 L CNN
+F 1 "10k" H 7570 5555 50  0000 L CNN
+F 2 "SamacSys_Parts:RESC1608X55N" V 7430 5600 50  0001 C CNN
+F 3 "~" H 7500 5600 50  0001 C CNN
+	1    7500 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR0118
+U 1 1 5D925F19
+P 7500 5300
+F 0 "#PWR0118" H 7500 5150 50  0001 C CNN
+F 1 "VDD" H 7517 5473 50  0000 C CNN
+F 2 "" H 7500 5300 50  0001 C CNN
+F 3 "" H 7500 5300 50  0001 C CNN
+	1    7500 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0119
+U 1 1 5D92F50E
+P 7850 5900
+F 0 "#PWR0119" H 7850 5650 50  0001 C CNN
+F 1 "GND" H 7855 5727 50  0000 C CNN
+F 2 "" H 7850 5900 50  0001 C CNN
+F 3 "" H 7850 5900 50  0001 C CNN
+	1    7850 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 5900 8250 5900
+$Comp
+L power:GND #PWR0120
+U 1 1 5D938D50
+P 10250 5900
+F 0 "#PWR0120" H 10250 5650 50  0001 C CNN
+F 1 "GND" H 10255 5727 50  0000 C CNN
+F 2 "" H 10250 5900 50  0001 C CNN
+F 3 "" H 10250 5900 50  0001 C CNN
+	1    10250 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C10
+U 1 1 5D939179
+P 10600 5950
+F 0 "C10" H 10715 5996 50  0000 L CNN
+F 1 "100nF" H 10715 5905 50  0000 L CNN
+F 2 "SamacSys_Parts:CAPC1608X90N" H 10638 5800 50  0001 C CNN
+F 3 "~" H 10600 5950 50  0001 C CNN
+	1    10600 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10250 5800 10600 5800
+$Comp
+L power:GND #PWR0121
+U 1 1 5D94297E
+P 10600 6100
+F 0 "#PWR0121" H 10600 5850 50  0001 C CNN
+F 1 "GND" H 10605 5927 50  0000 C CNN
+F 2 "" H 10600 6100 50  0001 C CNN
+F 3 "" H 10600 6100 50  0001 C CNN
+	1    10600 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR0122
+U 1 1 5D942C58
+P 10600 5800
+F 0 "#PWR0122" H 10600 5650 50  0001 C CNN
+F 1 "VDD" H 10617 5973 50  0000 C CNN
+F 2 "" H 10600 5800 50  0001 C CNN
+F 3 "" H 10600 5800 50  0001 C CNN
+	1    10600 5800
+	1    0    0    -1  
+$EndComp
+Connection ~ 10600 5800
+Wire Wire Line
+	10250 5700 10500 5700
+Wire Wire Line
+	10500 5700 10500 5550
+$Comp
+L Device:R R20
+U 1 1 5D94C958
+P 10500 5400
+F 0 "R20" H 10570 5446 50  0000 L CNN
+F 1 "10k" H 10570 5355 50  0000 L CNN
+F 2 "SamacSys_Parts:RESC1608X55N" V 10430 5400 50  0001 C CNN
+F 3 "~" H 10500 5400 50  0001 C CNN
+	1    10500 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR0123
+U 1 1 5D94CD07
+P 10500 5250
+F 0 "#PWR0123" H 10500 5100 50  0001 C CNN
+F 1 "VDD" H 10517 5423 50  0000 C CNN
+F 2 "" H 10500 5250 50  0001 C CNN
+F 3 "" H 10500 5250 50  0001 C CNN
+	1    10500 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 5750 7500 5800
+Wire Wire Line
+	7500 5800 8250 5800
+Wire Wire Line
+	8150 5600 8200 5600
+$Comp
+L Device:R R17
+U 1 1 5D96954B
+P 8200 5450
+F 0 "R17" H 8270 5496 50  0000 L CNN
+F 1 "2.2k" H 8270 5405 50  0000 L CNN
+F 2 "SamacSys_Parts:RESC1608X55N" V 8130 5450 50  0001 C CNN
+F 3 "~" H 8200 5450 50  0001 C CNN
+	1    8200 5450
+	1    0    0    -1  
+$EndComp
+Connection ~ 8200 5600
+Wire Wire Line
+	8200 5600 8250 5600
+Wire Wire Line
+	7500 5300 7500 5450
+Wire Wire Line
+	7500 5300 8200 5300
+Connection ~ 7500 5300
+Connection ~ 4500 6250
+Connection ~ 950  1450
+Wire Wire Line
+	950  1450 900  1450
+$Comp
+L power:VDD #PWR0124
+U 1 1 5D878258
+P 900 1450
+F 0 "#PWR0124" H 900 1300 50  0001 C CNN
+F 1 "VDD" H 917 1623 50  0000 C CNN
+F 2 "" H 900 1450 50  0001 C CNN
+F 3 "" H 900 1450 50  0001 C CNN
+	1    900  1450
+	1    0    0    -1  
+$EndComp
+Connection ~ 950  2050
+Connection ~ 1250 2050
+Wire Wire Line
+	1250 2050 950  2050
+Wire Wire Line
+	950  1850 950  2050
+Wire Wire Line
+	4250 1400 4250 1500
+Connection ~ 3600 1550
+Wire Wire Line
+	3600 1350 3600 1550
+Wire Wire Line
+	3150 1350 3600 1350
+Text Label 1250 1950 0    50   ~ 0
+pok
+Wire Wire Line
+	1350 1950 1250 1950
+Text Label 1250 1750 0    50   ~ 0
+Vsys
+Connection ~ 950  1850
+Wire Wire Line
+	950  1750 950  1850
+Connection ~ 1250 1450
+Wire Wire Line
+	950  1450 1250 1450
+Connection ~ 3250 1550
+Wire Wire Line
+	3250 1550 3600 1550
+$Comp
+L power:GND #PWR0125
+U 1 1 5D881B09
+P 3600 1550
+F 0 "#PWR0125" H 3600 1300 50  0001 C CNN
+F 1 "GND" H 3605 1377 50  0000 C CNN
+F 2 "" H 3600 1550 50  0001 C CNN
+F 3 "" H 3600 1550 50  0001 C CNN
+	1    3600 1550
+	1    0    0    -1  
+$EndComp
+Connection ~ 1250 1550
+Wire Wire Line
+	1250 1650 1250 1550
+Wire Wire Line
+	1350 1650 1250 1650
+Wire Wire Line
+	950  1850 1350 1850
+$Comp
+L power:GND #PWR0126
+U 1 1 5D878115
+P 950 2050
+F 0 "#PWR0126" H 950 1800 50  0001 C CNN
+F 1 "GND" H 955 1877 50  0000 C CNN
+F 2 "" H 950 2050 50  0001 C CNN
+F 3 "" H 950 2050 50  0001 C CNN
+	1    950  2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 2150 1350 2150
+Wire Wire Line
+	1250 2050 1250 2150
+Wire Wire Line
+	1350 2050 1250 2050
+Wire Wire Line
+	1350 1750 1250 1750
+Text Label 3350 1950 0    50   ~ 0
+Vsys
+Connection ~ 3250 1950
+Wire Wire Line
+	3250 1950 3350 1950
+Connection ~ 3250 2150
+Wire Wire Line
+	3250 2250 3250 2150
+Wire Wire Line
+	3150 2250 3250 2250
+Connection ~ 3250 2050
+Wire Wire Line
+	3250 2150 3250 2050
+Wire Wire Line
+	3150 2150 3250 2150
+Wire Wire Line
+	3250 2050 3150 2050
+Wire Wire Line
+	3250 1950 3250 2050
+Wire Wire Line
+	3150 1950 3250 1950
+Wire Wire Line
+	1250 1550 1350 1550
+Wire Wire Line
+	1250 1450 1250 1550
+Wire Wire Line
+	1350 1450 1250 1450
+$Comp
+L Device:C C4
+U 1 1 5D8E8E58
+P 950 1600
+F 0 "C4" H 750 1650 50  0000 L CNN
+F 1 "47uF" H 650 1550 50  0000 L CNN
+F 2 "SamacSys_Parts:CAPC1608X90N" H 988 1450 50  0001 C CNN
+F 3 "~" H 950 1600 50  0001 C CNN
+	1    950  1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 1550 3150 1550
+Wire Wire Line
+	3250 1650 3250 1550
+Wire Wire Line
+	3150 1650 3250 1650
+Text Label 1900 900  2    50   ~ 0
+LXBB1
+Text Label 2600 900  0    50   ~ 0
+LXBB2
+Wire Wire Line
+	2500 900  2600 900 
+Wire Wire Line
+	2000 900  1900 900 
+Wire Wire Line
+	1350 1350 1250 1350
+Text Label 3250 1450 0    50   ~ 0
+LXBB2
+Wire Wire Line
+	3150 1450 3250 1450
+Text Label 3250 1750 0    50   ~ 0
+LXBB1
+Wire Wire Line
+	3250 1750 3150 1750
+Wire Wire Line
+	3250 1850 3250 1750
+Wire Wire Line
+	3150 1850 3250 1850
+$Comp
+L pspice:INDUCTOR L1
+U 1 1 5D8CCA50
+P 2250 900
+F 0 "L1" H 2250 1115 50  0000 C CNN
+F 1 "1uH" H 2250 1024 50  0000 C CNN
+F 2 "SamacSys_Parts:INDPM2520X120N" H 2250 900 50  0001 C CNN
+F 3 "~" H 2250 900 50  0001 C CNN
+	1    2250 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L spicy:MAX77801ETP+ U2
+U 1 1 5D7E2F6F
+P 1350 1350
+F 0 "U2" H 2250 1737 60  0000 C CNN
+F 1 "MAX77801ETP+" H 2250 1631 60  0000 C CNN
+F 2 "SamacSys_Parts:MAX77801ETP&plus_" H 2250 1590 60  0001 C CNN
+F 3 "" H 1350 1350 60  0000 C CNN
+	1    1350 1350
+	1    0    0    -1  
+$EndComp
+Text Notes 3950 5450 0    50   ~ 0
+Battery Charger / USB Power adapter\n
+Wire Notes Line
+	550  7700 6150 7700
+Wire Notes Line
+	6150 7700 6150 5150
+Wire Notes Line
+	6150 5150 3500 5150
+Wire Notes Line
+	3500 5150 3500 3650
+Wire Notes Line
+	3500 3650 550  3650
+Wire Notes Line
+	550  3650 550  7700
+Text Notes 3450 900  0    50   ~ 0
+System Voltage Regulator\n
+Text Notes 9300 1200 0    50   ~ 0
+Buzzer\n
+Wire Notes Line
+	8700 550  8700 3150
+Wire Notes Line
+	8700 3150 11100 3150
+Wire Notes Line
+	11100 3150 11100 550 
+Wire Notes Line
+	11100 550  8700 550 
+Text Notes 9000 3500 0    50   ~ 0
+LEDs\n
+Wire Notes Line
+	8850 3300 8850 4550
+Wire Notes Line
+	8850 4550 10850 4550
+Wire Notes Line
+	10850 4550 10850 3300
+Wire Notes Line
+	10850 3300 8850 3300
+Text Notes 7550 4900 0    50   ~ 0
+uController External Flash memory 
+Wire Notes Line
+	7200 4800 7200 6300
+Wire Notes Line
+	7200 6300 11000 6300
+Wire Notes Line
+	11000 6300 11000 4800
+Wire Notes Line
+	11000 4800 7200 4800
+Text Notes 4350 3700 0    50   ~ 0
+Programmer header
+Wire Notes Line
+	4100 3550 4100 4700
+Text Notes 5550 700  0    50   ~ 0
+USB Communications Adapter\n
+Wire Wire Line
+	3150 2350 3250 2350
+Text Label 3250 2350 0    50   ~ 0
+scl
+Wire Wire Line
+	1350 2250 1200 2250
+Text Label 1200 2250 0    50   ~ 0
+sda
+Wire Notes Line
+	5350 600  5350 3400
+Text HLabel 3950 2050 3    50   BiDi ~ 0
+sda
+Text HLabel 4250 2050 3    50   Input ~ 0
+scl
+$Comp
+L spice-rescue:LS_L296-P2Q2-1-Z-SamacSys_Parts LED5
+U 1 1 5DB91E54
+P 4550 2650
+F 0 "LED5" H 4850 2385 50  0000 C CNN
+F 1 "LS_L296-P2Q2-1-Z" H 4850 2476 50  0000 C CNN
+F 2 "SamacSys_Parts:LEDC1707X85N" H 5050 2800 50  0001 L BNN
+F 3 "http://www.osram-os.com/Graphics/XPic5/00077119_0.pdf/LS L296 - SMARTLED 0603.pdf" H 5050 2700 50  0001 L BNN
+F 4 "Standard LEDs - SMD Super Red, 633nm 112mcd, 20mA" H 5050 2600 50  0001 L BNN "Description"
+F 5 "0.85" H 5050 2500 50  0001 L BNN "Height"
+F 6 "720-LSL296-P2Q2-1-Z" H 5050 2400 50  0001 L BNN "Mouser Part Number"
+F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=720-LSL296-P2Q2-1-Z" H 5050 2300 50  0001 L BNN "Mouser Price/Stock"
+F 8 "OSRAM Opto Semiconductors" H 5050 2200 50  0001 L BNN "Manufacturer_Name"
+F 9 "LS L296-P2Q2-1-Z" H 5050 2100 50  0001 L BNN "Manufacturer_Part_Number"
+	1    4550 2650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R13
+U 1 1 5DB9C6EC
+P 4950 1800
+F 0 "R13" H 5020 1846 50  0000 L CNN
+F 1 "5k" H 5020 1755 50  0000 L CNN
+F 2 "SamacSys_Parts:RESC1608X55N" V 4880 1800 50  0001 C CNN
+F 3 "~" H 4950 1800 50  0001 C CNN
+	1    4950 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R14
+U 1 1 5DB9CBFD
+P 4950 2200
+F 0 "R14" H 5020 2246 50  0000 L CNN
+F 1 "5k" H 5020 2155 50  0000 L CNN
+F 2 "SamacSys_Parts:RESC1608X55N" V 4880 2200 50  0001 C CNN
+F 3 "~" H 4950 2200 50  0001 C CNN
+	1    4950 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0127
+U 1 1 5DB9DB7B
+P 4950 2450
+F 0 "#PWR0127" H 4950 2200 50  0001 C CNN
+F 1 "GND" H 4955 2277 50  0000 C CNN
+F 2 "" H 4950 2450 50  0001 C CNN
+F 3 "" H 4950 2450 50  0001 C CNN
+	1    4950 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 2450 4950 2350
+Wire Wire Line
+	4950 2050 4950 1950
+Wire Wire Line
+	4950 1650 4950 1500
+Wire Wire Line
+	4950 1500 4550 1500
+Connection ~ 4550 1500
+Text HLabel 4950 2000 2    50   Output ~ 0
+Vbat
+Wire Notes Line
+	5150 2950 5150 600 
+$Comp
+L SamacSys_Parts:47346-1001 J3
+U 1 1 5D9FBB39
+P 5550 2850
+F 0 "J3" H 6200 3115 50  0000 C CNN
+F 1 "47346-1001" H 6200 3024 50  0000 C CNN
+F 2 "SamacSys_Parts:47491-0001" H 6700 2950 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/47346-1001.pdf" H 6700 2850 50  0001 L CNN
+F 4 "MOLEX - 47346-1001 - MULTIPOLE CONNECTOR" H 6700 2750 50  0001 L CNN "Description"
+F 5 "" H 6700 2650 50  0001 L CNN "Height"
+F 6 "538-47346-1001" H 6700 2550 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=538-47346-1001" H 6700 2450 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Molex" H 6700 2350 50  0001 L CNN "Manufacturer_Name"
+F 9 "47346-1001" H 6700 2250 50  0001 L CNN "Manufacturer_Part_Number"
+	1    5550 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 2850 6850 2550
+Wire Wire Line
+	6850 2550 6950 2550
+Wire Wire Line
+	6950 2650 6950 3250
+Wire Wire Line
+	6950 3250 5400 3250
+Wire Wire Line
+	5400 3250 5400 2950
+Wire Wire Line
+	5400 2950 5550 2950
+Wire Wire Line
+	5550 2850 5550 2450
+Text Label 6450 2450 0    50   ~ 0
+Vbus
+Wire Wire Line
+	5550 2450 6800 2450
+NoConn ~ 6850 2950
+$Comp
+L power:GND #PWR01
+U 1 1 5DA3C724
+P 5550 3050
+F 0 "#PWR01" H 5550 2800 50  0001 C CNN
+F 1 "GND" H 5555 2877 50  0000 C CNN
+F 2 "" H 5550 3050 50  0001 C CNN
+F 3 "" H 5550 3050 50  0001 C CNN
+	1    5550 3050
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	8550 3400 8550 600 
+Wire Notes Line
+	5350 3400 8550 3400
+Wire Notes Line
+	5350 600  8550 600 
+$Comp
+L SamacSys_Parts:MX25R8035FZUIL0 IC1
+U 1 1 5DA5080F
+P 8250 5600
+F 0 "IC1" H 9250 5865 50  0000 C CNN
+F 1 "MX25R8035FZUIL0" H 9250 5774 50  0000 C CNN
+F 2 "SamacSys_Parts:USON-8L" H 10100 5700 50  0001 L CNN
+F 3 "http://www.macronix.com/Lists/Datasheet/Attachments/5097/MX25R8035F,%20Wide%20Range,%208Mb,%20v1.3.pdf" H 10100 5600 50  0001 L CNN
+F 4 "ULTRA LOW POWER, 8M-BIT [x 1/x 2/x 4] CMOS MXSMIO (SERIAL MULTI I/O) FLASH MEMORY, USON-8L" H 10100 5500 50  0001 L CNN "Description"
+F 5 "" H 10100 5400 50  0001 L CNN "Height"
+F 6 "" H 10100 5300 50  0001 L CNN "Mouser Part Number"
+F 7 "" H 10100 5200 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Macronix" H 10100 5100 50  0001 L CNN "Manufacturer_Name"
+F 9 "MX25R8035FZUIL0" H 10100 5000 50  0001 L CNN "Manufacturer_Part_Number"
+	1    8250 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L SamacSys_Parts:M50-3600542R J1
+U 1 1 5DA7D480
+P 5450 4000
+F 0 "J1" H 5900 4265 50  0000 C CNN
+F 1 "M50-3600542R" H 5900 4174 50  0000 C CNN
+F 2 "SamacSys_Parts:M503600542R" H 6200 4100 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/M50-3600542R.pdf" H 6200 4000 50  0001 L CNN
+F 4 "HARWIN Archer M50, 1.27mm Pitch, 10 Way, 2 Row Unshrouded, Right Angle Pin Header, Surface Mount, Solder Termination" H 6200 3900 50  0001 L CNN "Description"
+F 5 "5" H 6200 3800 50  0001 L CNN "Height"
+F 6 "855-M50-3600542R" H 6200 3700 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=855-M50-3600542R" H 6200 3600 50  0001 L CNN "Mouser Price/Stock"
+F 8 "HARWIN" H 6200 3500 50  0001 L CNN "Manufacturer_Name"
+F 9 "M50-3600542R" H 6200 3400 50  0001 L CNN "Manufacturer_Part_Number"
+	1    5450 4000
+	-1   0    0    -1  
+$EndComp
+Wire Notes Line
+	4100 4700 5850 4700
+Wire Notes Line
+	4100 3550 5850 3550
+Wire Notes Line
+	5850 3550 5850 4700
+Wire Wire Line
+	1900 6150 1750 6150
+Wire Wire Line
+	1000 4950 1000 5250
+Wire Wire Line
+	1000 4300 1000 4650
+$Comp
+L spice-rescue:LS_L296-P2Q2-1-Z-SamacSys_Parts LED4
+U 1 1 5D9E37D1
+P 3200 5050
+F 0 "LED4" H 3500 4785 50  0000 C CNN
+F 1 "LS_L296-P2Q2-1-Z" H 3500 4876 50  0000 C CNN
+F 2 "SamacSys_Parts:LEDC1707X85N" H 3700 5200 50  0001 L BNN
+F 3 "http://www.osram-os.com/Graphics/XPic5/00077119_0.pdf/LS L296 - SMARTLED 0603.pdf" H 3700 5100 50  0001 L BNN
+F 4 "Standard LEDs - SMD Super Red, 633nm 112mcd, 20mA" H 3700 5000 50  0001 L BNN "Description"
+F 5 "0.85" H 3700 4900 50  0001 L BNN "Height"
+F 6 "720-LSL296-P2Q2-1-Z" H 3700 4800 50  0001 L BNN "Mouser Part Number"
+F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=720-LSL296-P2Q2-1-Z" H 3700 4700 50  0001 L BNN "Mouser Price/Stock"
+F 8 "OSRAM Opto Semiconductors" H 3700 4600 50  0001 L BNN "Manufacturer_Name"
+F 9 "LS L296-P2Q2-1-Z" H 3700 4500 50  0001 L BNN "Manufacturer_Part_Number"
+	1    3200 5050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L spice-rescue:LS_L296-P2Q2-1-Z-SamacSys_Parts LED3
+U 1 1 5D9E3449
+P 2650 5050
+F 0 "LED3" H 2950 4785 50  0000 C CNN
+F 1 "LS_L296-P2Q2-1-Z" H 2950 4876 50  0000 C CNN
+F 2 "SamacSys_Parts:LEDC1707X85N" H 3150 5200 50  0001 L BNN
+F 3 "http://www.osram-os.com/Graphics/XPic5/00077119_0.pdf/LS L296 - SMARTLED 0603.pdf" H 3150 5100 50  0001 L BNN
+F 4 "Standard LEDs - SMD Super Red, 633nm 112mcd, 20mA" H 3150 5000 50  0001 L BNN "Description"
+F 5 "0.85" H 3150 4900 50  0001 L BNN "Height"
+F 6 "720-LSL296-P2Q2-1-Z" H 3150 4800 50  0001 L BNN "Mouser Part Number"
+F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=720-LSL296-P2Q2-1-Z" H 3150 4700 50  0001 L BNN "Mouser Price/Stock"
+F 8 "OSRAM Opto Semiconductors" H 3150 4600 50  0001 L BNN "Manufacturer_Name"
+F 9 "LS L296-P2Q2-1-Z" H 3150 4500 50  0001 L BNN "Manufacturer_Part_Number"
+	1    2650 5050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L spice-rescue:LS_L296-P2Q2-1-Z-SamacSys_Parts LED2
+U 1 1 5D9E2EB9
+P 2100 5050
+F 0 "LED2" H 2400 4785 50  0000 C CNN
+F 1 "LS_L296-P2Q2-1-Z" H 2400 4876 50  0000 C CNN
+F 2 "SamacSys_Parts:LEDC1707X85N" H 2600 5200 50  0001 L BNN
+F 3 "http://www.osram-os.com/Graphics/XPic5/00077119_0.pdf/LS L296 - SMARTLED 0603.pdf" H 2600 5100 50  0001 L BNN
+F 4 "Standard LEDs - SMD Super Red, 633nm 112mcd, 20mA" H 2600 5000 50  0001 L BNN "Description"
+F 5 "0.85" H 2600 4900 50  0001 L BNN "Height"
+F 6 "720-LSL296-P2Q2-1-Z" H 2600 4800 50  0001 L BNN "Mouser Part Number"
+F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=720-LSL296-P2Q2-1-Z" H 2600 4700 50  0001 L BNN "Mouser Price/Stock"
+F 8 "OSRAM Opto Semiconductors" H 2600 4600 50  0001 L BNN "Manufacturer_Name"
+F 9 "LS L296-P2Q2-1-Z" H 2600 4500 50  0001 L BNN "Manufacturer_Part_Number"
+	1    2100 5050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L spice-rescue:LS_L296-P2Q2-1-Z-SamacSys_Parts LED1
+U 1 1 5D9D8E3C
+P 1550 5050
+F 0 "LED1" H 1850 4785 50  0000 C CNN
+F 1 "LS_L296-P2Q2-1-Z" H 1850 4876 50  0000 C CNN
+F 2 "SamacSys_Parts:LEDC1707X85N" H 2050 5200 50  0001 L BNN
+F 3 "http://www.osram-os.com/Graphics/XPic5/00077119_0.pdf/LS L296 - SMARTLED 0603.pdf" H 2050 5100 50  0001 L BNN
+F 4 "Standard LEDs - SMD Super Red, 633nm 112mcd, 20mA" H 2050 5000 50  0001 L BNN "Description"
+F 5 "0.85" H 2050 4900 50  0001 L BNN "Height"
+F 6 "720-LSL296-P2Q2-1-Z" H 2050 4800 50  0001 L BNN "Mouser Part Number"
+F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=720-LSL296-P2Q2-1-Z" H 2050 4700 50  0001 L BNN "Mouser Price/Stock"
+F 8 "OSRAM Opto Semiconductors" H 2050 4600 50  0001 L BNN "Manufacturer_Name"
+F 9 "LS L296-P2Q2-1-Z" H 2050 4500 50  0001 L BNN "Manufacturer_Part_Number"
+	1    1550 5050
+	0    -1   -1   0   
+$EndComp
+Text Label 3200 5250 0    50   ~ 0
+dok
+Text Label 2650 5250 0    50   ~ 0
+chg
+Text Label 2100 5250 0    50   ~ 0
+uok
+Text Label 1550 5250 0    50   ~ 0
+flt
+Wire Wire Line
+	3200 5050 3200 5250
+Wire Wire Line
+	2650 5050 2650 5250
+Wire Wire Line
+	2100 5050 2100 5250
+Wire Wire Line
+	1550 5050 1550 5250
+Wire Wire Line
+	3200 4450 3200 4350
+Text Label 3200 3850 0    50   ~ 0
+VL
+Wire Wire Line
+	3200 4050 3200 3850
+$Comp
+L Device:R R9
+U 1 1 5D8865F8
+P 3200 4200
+F 0 "R9" H 3050 4250 50  0000 C CNN
+F 1 "100k" H 3050 4150 50  0000 C CNN
+F 2 "SamacSys_Parts:RESC1608X55N" V 3130 4200 50  0001 C CNN
+F 3 "~" H 3200 4200 50  0001 C CNN
+	1    3200 4200
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 4450 2650 4350
+Text Label 2650 3850 0    50   ~ 0
+VL
+Wire Wire Line
+	2650 4050 2650 3850
+$Comp
+L Device:R R8
+U 1 1 5D883DB6
+P 2650 4200
+F 0 "R8" H 2500 4250 50  0000 C CNN
+F 1 "100k" H 2500 4150 50  0000 C CNN
+F 2 "SamacSys_Parts:RESC1608X55N" V 2580 4200 50  0001 C CNN
+F 3 "~" H 2650 4200 50  0001 C CNN
+	1    2650 4200
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 4450 2100 4350
+Text Label 2100 3850 0    50   ~ 0
+VL
+Wire Wire Line
+	2100 4050 2100 3850
+$Comp
+L Device:R R7
+U 1 1 5D88179D
+P 2100 4200
+F 0 "R7" H 1950 4250 50  0000 C CNN
+F 1 "100k" H 1950 4150 50  0000 C CNN
+F 2 "SamacSys_Parts:RESC1608X55N" V 2030 4200 50  0001 C CNN
+F 3 "~" H 2100 4200 50  0001 C CNN
+	1    2100 4200
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 4450 1550 4350
+Text Label 1550 3850 0    50   ~ 0
+VL
+Wire Wire Line
+	1550 4050 1550 3850
+$Comp
+L Device:R R3
+U 1 1 5D87407E
+P 1550 4200
+F 0 "R3" H 1400 4250 50  0000 C CNN
+F 1 "100k" H 1400 4150 50  0000 C CNN
+F 2 "SamacSys_Parts:RESC1608X55N" V 1480 4200 50  0001 C CNN
+F 3 "~" H 1550 4200 50  0001 C CNN
+	1    1550 4200
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 5D873988
+P 1000 5250
+F 0 "#PWR0109" H 1000 5000 50  0001 C CNN
+F 1 "GND" H 1005 5077 50  0000 C CNN
+F 2 "" H 1000 5250 50  0001 C CNN
+F 3 "" H 1000 5250 50  0001 C CNN
+	1    1000 5250
+	1    0    0    -1  
+$EndComp
+Text Label 1000 4350 0    50   ~ 0
+THM
+$Comp
+L Device:R R2
+U 1 1 5D871735
+P 1000 4800
+F 0 "R2" H 850 4850 50  0000 C CNN
+F 1 "10k" H 850 4750 50  0000 C CNN
+F 2 "SamacSys_Parts:RESC1608X55N" V 930 4800 50  0001 C CNN
+F 3 "~" H 1000 4800 50  0001 C CNN
+	1    1000 4800
+	-1   0    0    -1  
+$EndComp
+Text Label 1000 3850 0    50   ~ 0
+VL
+Wire Wire Line
+	1000 3850 1000 4000
+$Comp
+L Device:R R1
+U 1 1 5D86A19B
+P 1000 4150
+F 0 "R1" H 850 4200 50  0000 C CNN
+F 1 "10k" H 850 4100 50  0000 C CNN
+F 2 "SamacSys_Parts:RESC1608X55N" V 930 4150 50  0001 C CNN
+F 3 "~" H 1000 4150 50  0001 C CNN
+	1    1000 4150
+	-1   0    0    -1  
+$EndComp
+NoConn ~ 8150 2750
+NoConn ~ 8150 2650
+NoConn ~ 8150 2550
+NoConn ~ 8150 2450
+NoConn ~ 8150 2250
+NoConn ~ 8150 2150
+NoConn ~ 8150 2050
+NoConn ~ 8150 1750
+NoConn ~ 8150 1650
+NoConn ~ 8150 1550
+NoConn ~ 6950 1950
+NoConn ~ 6950 1850
+Connection ~ 900  1450
+Wire Wire Line
+	900  1450 800  1450
+Text Label 1250 1350 2    50   ~ 0
+LXBB2
+Text HLabel 800  1450 0    50   Output ~ 0
+VDD
+Wire Notes Line
+	550  2950 550  600 
+Wire Notes Line
+	550  2950 5150 2950
+Wire Notes Line
+	550  600  5150 600 
+$Comp
+L power:VDD #PWR0101
+U 1 1 5DA863CC
+P 4250 1400
+F 0 "#PWR0101" H 4250 1250 50  0001 C CNN
+F 1 "VDD" H 4267 1573 50  0000 C CNN
+F 2 "" H 4250 1400 50  0001 C CNN
+F 3 "" H 4250 1400 50  0001 C CNN
+	1    4250 1400
+	1    0    0    -1  
+$EndComp
+Text HLabel 950  2050 0    50   BiDi ~ 0
+GND
+$EndSCHEMATC
