@@ -1,3 +1,0 @@
-(sym_lib_table
-  (lib (name spicy)(type Legacy)(uri ${KIPRJMOD}/spicy.lib)(options "")(descr ""))
-)
